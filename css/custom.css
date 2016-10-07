@@ -1,0 +1,6 @@
+/*IMPORTANT*/
+/*You must include this class in your file css to get the icons ready in the menu APAFormat*/
+
+.fontAwesome{
+    font-family: FontAwesome !important;
+}

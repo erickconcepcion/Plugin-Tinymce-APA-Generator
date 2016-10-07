@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/Citation-0.1.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+    <script>
+         tinymce.init({ 
+             selector:'#tinymce',
+             plugins: 'APAFormat',
+             toolbar: 'APAFormat'
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+             <h1>Plugin APA Format</h1>
+        </div>
+        <textarea id="tinymce"></textarea>
+    </div>
+</body>
+
+</html>

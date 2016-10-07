@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Citation APA Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="container">
+    <br/>
+    <form id="APABook" style="display: none" data-bind="visible: apaBook, if: apaBook"   >
+        <input-section params="name: 'author', label: 'Autor del libro/Organización'"></input-section>
+        <input-section params="name: 'editor', label: 'Editora/Organización'"></input-section>
+        <input-section params="name: 'title', label: 'Título del libro'"></input-section>
+        <div class="row">
+            <div class="col-xs-6">
+                <input-section params="name: 'print', label: 'Edición', type: 'number'"></input-section>
+            </div>
+            <div class="col-xs-6">
+                <input-section params="name: 'year', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <input-section params="name: 'place', label: 'Lugar de publicación'"></input-section>
+        <input-section params="name: 'publisher', label: 'Publicador/a'"></input-section>
+    </form>
+
+
+    <form id="APAChapter" style="display: none" data-bind="visible: apaChapter, if: apaChapter"   >
+        <input-section params="name: 'chapterauthor', label: 'Autor del Capítulo'"></input-section>
+        <input-section params="name: 'author', label: 'Autor'"></input-section>
+        <input-section params="name: 'editor', label: 'Editora/Organización'"></input-section>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'title', label: 'Título'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'chapter', label: 'Capítulo'"></input-section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'year', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'print', label: 'Edición', type: 'number'"></input-section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'place', label: 'Lugar de publicación'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label class="control-label">Pages</label>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageFrom" type="number"/>
+                        </div>
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageTo" type="number"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input-section params="name: 'publisher', label: 'Publicador/a'"></input-section>
+    </form>
+
+
+    <form id="APAArticle" style="display: none" data-bind="visible: apaArticle, if: apaArticle"   >
+        <input-section params="name: 'author', label: 'Autor'"></input-section>
+        <input-section params="name: 'title', label: 'Título'"></input-section>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'journal', label: 'Diario'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'year', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <input-section params="name: 'volume', label: 'Volumen', type: 'number'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'number', label: 'Número', type: 'number'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label class="control-label">Pages</label>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageFrom" type="number"/>
+                        </div>
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageTo" type="number"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <form id="APAEArticle" style="display: none" data-bind="visible: apaEArticle, if: apaEArticle"  >
+        <input-section params="name: 'author', label: 'Autor'"></input-section>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'title', label: 'Título'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'date', label: 'Citación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'journal', label: 'Diario'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'year', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <input-section params="name: 'volume', label: 'Volumen', type: 'number'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'number', label: 'Número', type: 'number'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label class="control-label">Pages</label>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageFrom" type="number"/>
+                        </div>
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageTo" type="number"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input-section params="name: 'url', label: 'URL'"></input-section>
+    </form>
+
+
+    <form id="APAEPublication" style="display: none" data-bind="visible: apaEPublication, if: apaEPublication"  >
+        <input-section params="name: 'author', label: 'Autor'"></input-section>
+        <div class="row">
+            <div class="col-xs-6">
+                <input-section params="name: 'pubdate', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+            <div class="col-xs-6">
+                <input-section params="name: 'date', label: 'Citación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <input-section params="name: 'title', label: 'Título'"></input-section>
+        <input-section params="name: 'url', label: 'URL'"></input-section>
+    </form>
+
+
+    <form id="APAPaper" style="display: none" data-bind="visible: apaPaper, if: apaPaper"  >
+        <input-section params="name: 'author', label: 'Autor'"></input-section>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'title', label: 'Título'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'year', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <fieldset>
+            <legend style="font-size: 17px; font-weight: 600;">Papel de la conferencia</legend>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input-section params="name: 'name', label: 'Nombre'"></input-section>
+                </div>
+                <div class="col-xs-6">
+                    <input-section params="name: 'org', label: 'Organización'"></input-section>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-xs-6">
+                    <input-section params="name: 'place', label: 'Lugar'"></input-section>
+                </div>
+                <div class="col-xs-6">
+                    <input-section params="name: 'country', label: 'País'"></input-section>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="APANewsPaper" style="display: none" data-bind="visible: apaNewsPaper, if: apaNewsPaper"  >
+        <input-section params="name: 'author', label: 'Autor'"></input-section>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'title', label: 'Título'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <input-section params="name: 'pubdate', label: 'Fecha de publicación', type: 'date'"></input-section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <input-section params="name: 'journal', label: 'Diario'"></input-section>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label class="control-label">Pages</label>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageFrom" type="number" />
+                        </div>
+                        <div class="col-xs-6">
+                            <input class="form-control" name="pageTo" type="number" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<script>
+    var SOLVEX = SOLVEX || {};
+    SOLVEX.Dynamic = SOLVEX.Dynamic || {};
+    SOLVEX.Dynamic.params = top.tinymce ? top.tinymce.activeEditor.windowManager.getParams() : {};
+</script>
+<script src="js/knockout-3.4.0.js"></script>
+<script src="js/App.js"></script>
+</body>
+
+</html>
