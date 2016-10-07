@@ -19,6 +19,9 @@ See [Installation](#Installation) to get ready with this awesome plugin.
 
 The only thing you have to do to get the plugin ready in your application is download this repository and run it in a sever `"localhost"`, and that's it, no more configuration, no more setting because all thirdparty library are included in the repository.
 
+# Demo
+
+* [Go to the web site to see demo](http://vmetasoft.com/tinymce)
 
 [Citation-0.1]:         https://github.com/larsgw/citation.js/
 [knockout-3.4.0]:       https://github.com/knockout/knockout
